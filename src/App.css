@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+:root {
+  --bg-main-color: #171717;
+  --txt-color: #ffffff;
+  --cross-zero-tip: #ef9919;
+  --bg-chat-table-color: #313131;
+  --lines-table-color: #7d7d7d;
+  --oponent-msg-color: #737373;
+  --player-msg-color: #00ae1c;
+  --title-bar-color: #222222;
+  --bg-chat-input-color: #424242;
+  --loss-msg-color: #ff5620;
+  --win-msg-color: #00ae1c;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--txt-color);
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+}
+.tic-tac-toe {
+  background-color: var(--bg-main-color);
+}
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid var(--lines-table-color);
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 10px;
+}
+.score-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.btn-reset {
+  background-color: var(--player-msg-color);
+  height: 24px;
+}
+.players-wrap {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+}
+.game--table-section {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.status-msg {
+  font-size: 15px;
+  text-align: center;
+  color: var(--cross-zero-tip);
+}
+.win-msg {
+  color: var(--win-msg-color);
+}
+.lose-msg {
+  color: var(--loss-msg-color);
+}
+.user-icon {
+  border-radius: 50%;
+  background-color: var(--bg-chat-table-color);
+  color: var(--cross-zero-tip);
+}
+.player-section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lines-table-color);
+  min-width: 320px;
+}
+.tic-tac-table {
+  margin: 0 auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-chat-table-color);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.board-row {
+  display: flex;
+  flex-direction: row;
+}
+.vertical {
+  border-left: 1px var(--lines-table-color);
+  border-right: 1px var(--lines-table-color);
+}
+.horizontal {
+  border-top: 1px var(--lines-table-color);
+  border-bottom: 1px var(--lines-table-color);
+}
+.square {
+  background-color: var(--bg-chat-table-color);
+  color: var(--cross-zero-tip);
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  padding: 10px;
+}
+.user-title {
+  background-color: var(--title-bar-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+}
+.user-name {
+  font-size: 10px;
+  margin-left: 5px;
+}
+.user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-chat-table-color);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+}
+.messages {
+  height: 434px;
+  overflow-y: scroll;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.message {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: auto;
+  font-size: 10px;
+}
+
+.own {
+  background-color: var(--player-msg-color);
+  align-self: flex-end;
+}
+
+.received {
+  background-color: var(--oponent-msg-color);
+  align-self: flex-start;
+}
+.input-group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid var(--lines-table-color);
+  border-radius: 4px;
+  background-color: var(--bg-chat-input-color);
+}
+input[type="text"] {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  font-size: 10px;
+  background-color: var(--bg-chat-input-color);
+  padding: 2px 40px 2px 10px;
+  border: none;
+}
+input[type="text"]:focus {
+  border: none !important;
+  appearance: none;
+}
+input[type="submit"] {
+  width: 24px;
+  height: 24px;
+  background: url("./assets/SendIcon.png") center center no-repeat;
+  border: none;
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+}
